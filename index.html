@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Smile!</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <style>
       html, body {
         margin          : 0;
         padding         : 0;
         width           : 100%;
         height          : 100%;
+        font-family: 'Karla', Arial, Helvetica, sans-serif;
       }
 
+      a:link, a:hover, a:visited, a:active {
+        color: #0879bf;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      } 
       .container {
         height          : 100%;
         display         : flex;
@@ -60,6 +69,9 @@
       </svg>
       <div class="slidecontainer">
         <input type="range" min="1" max="100" value="100" class="slider" id="myRange">
+      </div>
+      <div>
+        <p><a href="https://github.com/dwmkerr/svg-smile">github.com/dwmkerr/svg-smile</a></p>
       </div>
     </div>
     <script>
