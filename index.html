@@ -3,27 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <title>Smile!</title>
-<style>
-html, body {
-  margin: 0;
-    padding: 0;
-      width: 100%;
-      height: 100%;
-}
+    <style>
+      html, body {
+        margin          : 0;
+        padding         : 0;
+        width           : 100%;
+        height          : 100%;
+      }
 
-.container {
-  height: 100%;
-  display: flex;
-    flex-direction: column;
+      .container {
+        height          : 100%;
+        display         : flex;
+        flex-direction  : column;
+        justify-content : center;
+        align-items     : center;
+      }
 
-  justify-content:         center;
-  align-items:         center;
-}
-
-#svg {
-  flex: 1;
-}
-</style>
+      #svg {
+        flex            : 1;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -97,11 +96,7 @@ function writeSmilePoints(points) {
   return `M${p(points[0])} C${p(points[1])} ${p(points[2])} ${p(points[3])}`;
 }
 
-function onChange() {
-  //  Get the slider value, scale it from percentage to 0-1.
-  var val = this.value;
-  const scale = parseInt(val, 10) / 100;
-  
+function scaleSmile(scale) {
   //  Get the geometry of the new smile.
   const points = writeSmilePoints(smilePoints(scale));
   var svg = document.getElementById('svg');
@@ -131,6 +126,13 @@ function onChange() {
   a.setAttribute('fill', 'freeze');
   faceCircle.appendChild(a);
   a.beginElement();
+}
+
+function onChange() {
+  //  Get the slider value, scale it from percentage to 0-1.
+  var val = this.value;
+  const scale = parseInt(val, 10) / 100;
+  scaleSmile(scale);
 }
 
 var slider = document.getElementById('myRange');
