@@ -111,14 +111,14 @@ function writeSmilePoints(points) {
 function scaleSmile(scale) {
   //  Get the geometry of the new smile.
   const points = writeSmilePoints(smilePoints(scale));
-  var svg = document.getElementById('svg');
+  const svg = document.getElementById('svg');
 
   //  Create the geometry animation, which will look summat like this:
   //  <animate attributeName="d" attributeType="XML"
   //    to="M-20,10 C-20,-10 20,-10 20,10" dur="3s" repeatCount="indefinite"
   //    fill="freeze" />
-  var smilePath = document.getElementById('smilepath');
-  var animate = document.createElementNS(svg.namespaceURI, 'animate');
+  const smilePath = document.getElementById('smilepath');
+  const animate = document.createElementNS(svg.namespaceURI, 'animate');
   animate.setAttribute('attributeName','d');
   animate.setAttribute('attributeType','XML');
   animate.setAttribute('to',points);
@@ -129,8 +129,8 @@ function scaleSmile(scale) {
   animate.beginElement();
 
   //  Animate the face color.
-  var faceCircle = document.getElementById('facecircle');
-  var a = document.createElementNS(svg.namespaceURI, 'animate');
+  const faceCircle = document.getElementById('facecircle');
+  const a = document.createElementNS(svg.namespaceURI, 'animate');
   a.setAttribute('attributeName', 'fill');
   a.setAttribute('attributeType', 'CSS');
   a.setAttribute('dur', '0.3s');
@@ -142,12 +142,12 @@ function scaleSmile(scale) {
 
 function onChange() {
   //  Get the slider value, scale it from percentage to 0-1.
-  var val = this.value;
+  const val = this.value;
   const scale = parseInt(val, 10) / 100;
   scaleSmile(scale);
 }
 
-var slider = document.getElementById('myRange');
+const slider = document.getElementById('myRange');
 slider.oninput = onChange;
     </script>
   </body>
