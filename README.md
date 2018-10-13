@@ -2,7 +2,7 @@
 
 Procedurally animated smiley face with SVG and pure JavaScript.
 
-[![Smile CodePen](./docs/pen.png)](https://codepen.io/dwmkerr/pen/ejejeX/)
+[![Smile CodePen](./docs/pen.png)](https://codepen.io/dwmkerr/pen/ejejeX/) [![GuardRails badge](https://badges.production.guardrails.io/dwmkerr/svg-smile.svg)](https://www.guardrails.io)
 
 CodePen: https://codepen.io/dwmkerr/pen/ejejeX/
 
